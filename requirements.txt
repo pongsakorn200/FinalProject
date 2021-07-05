@@ -1,0 +1,14 @@
+sudo pip3 urllib3
+sudo pip3 requests
+sudo pip3 paho-mqtt
+sudo pip3 install RPi.GPIO
+
+# Compile icon.qrc file
+# pyrcc5 -o Content\icons\icons_rc.py Content\icons\icons.qrc
+# pyuic5 UI_Main.ui -o ui_main.py
+
+# Are you wanting your python code to run at pi boot ?
+# if so you need to use the " /etc/xdg/lxsession/LXDE-pi/autostart " file to run the terminal and your python program after the GUI has loaded.so open the file with the following command
+# sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+# and add as the last line the following, were " /home/pi/your_script.py " is the path and file name of your python program
+# python3 ~/home/pi/your_script.py
